@@ -53,10 +53,10 @@ class Scraper
     end 
     
  
-    student_page[:blog] = social_links[3] if social_links[3] != nil
-    student_page[:profile_quote] = page.css(".profile-quote")[0].text
-    student_page[:bio] = page.css(".description-holder").css('p')[0].text
-    student_page
+    profile_info[:blog] = social_links[3] if social_links[3] != nil
+    profile_info[:profile_quote] = doc.css(".profile-quote")[0].text
+    profile_info[:bio] = doc.css(".description-holder").css('p')[0].text
+    profile_info
   
       
 
