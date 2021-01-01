@@ -53,7 +53,7 @@ class Scraper
     end 
     
  
-    profile_info[:blog] = social_links[3] if social_links[3] != nil
+    profile_info[:blog] = all_profile[3] if all_profile[3] != nil
     profile_info[:profile_quote] = doc.css(".profile-quote")[0].text
     profile_info[:bio] = doc.css(".description-holder").css('p')[0].text
     profile_info
